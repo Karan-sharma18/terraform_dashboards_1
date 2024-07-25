@@ -109,6 +109,7 @@ resource "newrelic_one_dashboard" "relicstaurants_dash_new" {
         query      = "SELECT percentage(count(*), WHERE `error` IS true) AS ErrorRate FROM Transaction SINCE 1 day ago"
       }
     }
+    
 
 
 

@@ -1,0 +1,1 @@
+template_variable_options = [ "delhi","chandigarh","mumbai","bangalore"]
