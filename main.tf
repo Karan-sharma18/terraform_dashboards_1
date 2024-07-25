@@ -130,7 +130,7 @@ resource "newrelic_one_dashboard" "relicstaurants_dash_new" {
 
 
 
-    widget_funnel {
+    widget_billboard {
       title  = "transaction success rate"
       row    = 7
       column = 1
@@ -381,7 +381,7 @@ resource "newrelic_one_dashboard" "dash_infra_new" {
       height = 3
 
       nrql_query {
-        query = "SELECT threadCount FROM ProcessSample SINCE 1 hour ago"
+        query = "SELECT threadCount FROM ProcessSample"
       }
     }
 
@@ -394,7 +394,7 @@ resource "newrelic_one_dashboard" "dash_infra_new" {
       height = 3
 
       nrql_query {
-        query = "SELECT percentage(count(*), WHERE `duration` > 0) AS Availability FROM InfrastructureEvent SINCE 1 day ago"
+        query = "SELECT percentage(count(*), WHERE `duration` > 0) AS Availability FROM InfrastructureEvent"
       }
     }
     
